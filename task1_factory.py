@@ -1,13 +1,11 @@
 """
 Завдання 1: Патерн фабрика для створення транспортних засобів
 """
-import logging
 from abc import ABC, abstractmethod
-from typing import Protocol
 
-# Налаштування логування
-logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
-logger = logging.getLogger(__name__)
+from logger import setup_logger
+
+logger = setup_logger(__name__)
 
 
 class Vehicle(ABC):

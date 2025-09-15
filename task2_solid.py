@@ -1,13 +1,12 @@
 """
 Завдання 2: Рефакторинг коду бібліотеки згідно принципів SOLID
 """
-import logging
 from abc import ABC, abstractmethod
-from typing import List, Optional
+from typing import List
 
-# Налаштування логування
-logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
-logger = logging.getLogger(__name__)
+from logger import setup_logger
+
+logger = setup_logger(__name__)
 
 
 class Book:
